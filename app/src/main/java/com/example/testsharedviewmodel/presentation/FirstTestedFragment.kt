@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.testsharedviewmodel.MainActivity
 import com.example.testsharedviewmodel.R
+import com.example.testsharedviewmodel.activityComponent
 import com.example.testsharedviewmodel.databinding.FragmentFirstBinding
 import com.example.testsharedviewmodel.openFragment
 import javax.inject.Inject
@@ -24,7 +25,7 @@ class FirstTestedFragment : Fragment(R.layout.fragment_first) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        MainActivity.appComponent?.inject(this)
+        requireActivity().activityComponent.inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

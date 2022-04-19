@@ -1,16 +1,14 @@
 package com.example.testsharedviewmodel.di
 
-import android.app.Activity
-import android.content.Context
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
 import com.example.testsharedviewmodel.presentation.TestedViewModel
 import dagger.Module
 import dagger.Provides
 
 @Module
-class View {
+class SharedViewModelsModule {
+    @SharedViewModel
     @Provides
     fun provideTestedViewModel(
         viewModelStoreOwner: ViewModelStoreOwner
